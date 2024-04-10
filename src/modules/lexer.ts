@@ -1,3 +1,5 @@
+// 
+
 export enum TokenType {
   Number,
   Identifier,
@@ -96,6 +98,6 @@ export function tokenize(input: string): Token[] {
   return tokens;
 }
 
-for (const token of tokenize("let x = 1 + 2 * ( 4 / 3 ) ;")) {
+for (const token of tokenize("let x = 1 + 2 * ( 4 / 3 )")) {
   console.log(token);
 }
