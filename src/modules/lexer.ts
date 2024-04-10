@@ -98,6 +98,8 @@ export function tokenize(input: string): Token[] {
   return tokens;
 }
 
-for (const token of tokenize("let x = 1 + 2 * ( 4 / 3 )")) {
+const file = Bun.file("text.let");
+const source_code = await file.text()
+for (const token of tokenize(source_code)) {
   console.log(token);
 }
